@@ -57,6 +57,13 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
         </dependency>
+
+        <!--fastDFS-client-->
+        <dependency>
+            <groupId>fastDFS</groupId>
+            <artifactId>fastdfs-client</artifactId>
+            <version>1.20</version>
+        </dependency>
     </dependencies>
 
 </project>
