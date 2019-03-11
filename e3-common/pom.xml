@@ -64,6 +64,13 @@
             <artifactId>fastdfs-client</artifactId>
             <version>1.20</version>
         </dependency>
+
+        <!-- Redis客户端 -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>

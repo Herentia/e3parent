@@ -1,4 +1,4 @@
-package com.e3mall.utils;
+package com.e3mall.common;
 
 import java.io.Serializable;
 import java.util.List;

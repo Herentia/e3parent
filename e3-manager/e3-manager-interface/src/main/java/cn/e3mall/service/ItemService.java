@@ -2,7 +2,7 @@ package cn.e3mall.service;
 
 import cn.e3mall.pojo.TbItem;
 import com.e3mall.common.EasyUIDataGridResult;
-import com.e3mall.utils.E3Result;
+import com.e3mall.common.E3Result;
 
 public interface ItemService {
 

@@ -1,5 +1,6 @@
 package cn.e3mall.content.service;
 
+import com.e3mall.common.E3Result;
 import com.e3mall.common.EasyUITreeNode;
 
 import java.util.List;
@@ -10,6 +11,19 @@ import java.util.List;
  */
 public interface ContentCategoryService {
 
+    /**
+     * 查询所有树节点
+     * @param parentId 父节点ID
+     * @return
+     */
     List<EasyUITreeNode> getContentCatList(long parentId);
+
+    /**
+     *  增加子节点
+     * @param parentId 子节点ID
+     * @param name  子节点名称
+     * @return
+     */
+    E3Result addContentCategory(long parentId, String name);
 
 }

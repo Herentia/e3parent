@@ -3,16 +3,12 @@ package cn.e3mall.controller;
 import cn.e3mall.pojo.TbItem;
 import cn.e3mall.service.ItemService;
 import com.e3mall.common.EasyUIDataGridResult;
-import com.e3mall.utils.E3Result;
+import com.e3mall.common.E3Result;
 import com.e3mall.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 

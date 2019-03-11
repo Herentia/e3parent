@@ -7,7 +7,7 @@ import cn.e3mall.pojo.TbItemDesc;
 import cn.e3mall.pojo.TbItemExample;
 import cn.e3mall.service.ItemService;
 import com.e3mall.common.EasyUIDataGridResult;
-import com.e3mall.utils.E3Result;
+import com.e3mall.common.E3Result;
 import com.e3mall.utils.IDUtils;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
