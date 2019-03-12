@@ -1,7 +1,7 @@
 package cn.e3mall.content.service;
 
 import cn.e3mall.pojo.TbContent;
-import com.e3mall.common.E3Result;
+import com.e3mall.common.pojo.E3Result;
 
 import java.util.List;
 

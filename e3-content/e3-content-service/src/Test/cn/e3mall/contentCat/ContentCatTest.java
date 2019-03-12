@@ -1,7 +1,7 @@
 package cn.e3mall.contentCat;
 
 import cn.e3mall.content.service.ContentCategoryService;
-import com.e3mall.common.EasyUITreeNode;
+import com.e3mall.common.pojo.EasyUITreeNode;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

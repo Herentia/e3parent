@@ -2,9 +2,9 @@ package cn.e3mall.controller;
 
 import cn.e3mall.pojo.TbItem;
 import cn.e3mall.service.ItemService;
-import com.e3mall.common.EasyUIDataGridResult;
-import com.e3mall.common.E3Result;
-import com.e3mall.utils.JsonUtils;
+import com.e3mall.common.pojo.EasyUIDataGridResult;
+import com.e3mall.common.pojo.E3Result;
+import com.e3mall.common.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

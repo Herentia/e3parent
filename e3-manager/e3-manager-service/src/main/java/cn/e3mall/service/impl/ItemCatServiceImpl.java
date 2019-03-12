@@ -5,7 +5,7 @@ import cn.e3mall.pojo.TbItemCat;
 import cn.e3mall.pojo.TbItemCatExample;
 import cn.e3mall.pojo.TbItemCatExample.Criteria;
 import cn.e3mall.service.ItemCatService;
-import com.e3mall.common.EasyUITreeNode;
+import com.e3mall.common.pojo.EasyUITreeNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

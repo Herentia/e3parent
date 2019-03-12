@@ -5,8 +5,8 @@ import cn.e3mall.mapper.TbContentCategoryMapper;
 import cn.e3mall.pojo.TbContentCategory;
 import cn.e3mall.pojo.TbContentCategoryExample;
 import cn.e3mall.pojo.TbContentCategoryExample.Criteria;
-import com.e3mall.common.E3Result;
-import com.e3mall.common.EasyUITreeNode;
+import com.e3mall.common.pojo.E3Result;
+import com.e3mall.common.pojo.EasyUITreeNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package cn.e3mall.controller;
 
-import com.e3mall.utils.FastDFSClient;
-import com.e3mall.utils.JsonUtils;
+import com.e3mall.common.utils.FastDFSClient;
+import com.e3mall.common.utils.JsonUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

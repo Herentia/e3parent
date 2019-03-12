@@ -1,6 +1,6 @@
 package com.e3mall.fastDFS;
 
-import com.e3mall.utils.FastDFSClient;
+import com.e3mall.common.utils.FastDFSClient;
 import org.junit.Test;
 
 /**

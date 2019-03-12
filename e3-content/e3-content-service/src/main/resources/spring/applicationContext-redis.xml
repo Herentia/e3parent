@@ -10,7 +10,7 @@
         <constructor-arg name="port" value="6379" />
     </bean>
     <!--像单机版实现类中通过参数的形式注入jedisPool的bean-->
-    <bean id="jedisClientPool" class="com.e3mall.jedis.JedisClientPool">
+    <bean id="jedisClientPool" class="com.e3mall.common.jedis.JedisClientPool">
         <property name="jedisPool" ref="jedisPool" />
     </bean>
 
@@ -47,7 +47,7 @@
         <!--</constructor-arg>-->
     <!--</bean>-->
 
-    <!--<bean id="jedisClientCluster" class="com.e3mall.jedis.JedisClientCluster">-->
+    <!--<bean id="jedisClientCluster" class="com.e3mall.common.jedis.JedisClientCluster">-->
         <!--<property name="jedisCluster" ref="jedisCluster" />-->
     <!--</bean>-->
 

@@ -1,4 +1,4 @@
-package com.e3mall.utils;
+package com.e3mall.common.utils;
 
 import org.csource.common.NameValuePair;
 import org.csource.fastdfs.ClientGlobal;

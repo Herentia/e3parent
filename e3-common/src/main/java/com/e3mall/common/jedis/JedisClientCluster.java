@@ -1,4 +1,4 @@
-package com.e3mall.jedis;
+package com.e3mall.common.jedis;
 
 import redis.clients.jedis.JedisCluster;
 

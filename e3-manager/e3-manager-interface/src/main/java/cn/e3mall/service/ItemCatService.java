@@ -1,6 +1,6 @@
 package cn.e3mall.service;
 
-import com.e3mall.common.EasyUITreeNode;
+import com.e3mall.common.pojo.EasyUITreeNode;
 
 import java.util.List;
 

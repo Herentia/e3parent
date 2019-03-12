@@ -1,8 +1,8 @@
 package cn.e3mall.controller;
 
 import cn.e3mall.content.service.ContentCategoryService;
-import com.e3mall.common.E3Result;
-import com.e3mall.common.EasyUITreeNode;
+import com.e3mall.common.pojo.E3Result;
+import com.e3mall.common.pojo.EasyUITreeNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
