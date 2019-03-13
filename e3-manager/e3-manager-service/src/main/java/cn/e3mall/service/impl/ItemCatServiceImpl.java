@@ -33,11 +33,11 @@ public class ItemCatServiceImpl implements ItemCatService {
         List<TbItemCat> tbItemCats = catMapper.selectByExample(example);
         //创建返回结果list
         List<EasyUITreeNode> list = new ArrayList<>();
-        for(TbItemCat tbItemCat : tbItemCats) {
+        for (TbItemCat tbItemCat : tbItemCats) {
             EasyUITreeNode treeNode = new EasyUITreeNode();
             treeNode.setId(tbItemCat.getId());
             treeNode.setText(tbItemCat.getName());
-            treeNode.setState(tbItemCat.getIsParent()?"closed":"open");
+            treeNode.setState(tbItemCat.getIsParent() ? "closed" : "open");
             list.add(treeNode);
         }
         return list;

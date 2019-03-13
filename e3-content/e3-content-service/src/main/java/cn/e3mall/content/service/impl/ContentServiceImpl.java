@@ -49,7 +49,7 @@ public class ContentServiceImpl implements ContentService {
         try {
             String json = jedisClient.hget(CONTENT_LIST, cid + "");
             //若json不为空则返回
-            if(StringUtils.isNoneBlank(json)) {
+            if (StringUtils.isNoneBlank(json)) {
                 List<TbContent> list = JsonUtils.jsonToList(json, TbContent.class);
                 return list;
             }

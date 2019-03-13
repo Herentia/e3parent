@@ -20,6 +20,7 @@ public class ItemController {
 
     /**
      * 通过订单ID回显商品信息
+     *
      * @param itemId
      * @return
      */
@@ -38,9 +39,9 @@ public class ItemController {
 
     /**
      * 通过ID回显商品描述信息
+     *
      * @param itemId
-     * @return
-     * /rest/item/query/item/desc/
+     * @return /rest/item/query/item/desc/
      */
     @ResponseBody
     @RequestMapping("/rest/item/query/item/desc/{itemId}")
@@ -58,6 +59,7 @@ public class ItemController {
 
     /**
      * 获取商品分页
+     *
      * @param page
      * @param rows
      * @return

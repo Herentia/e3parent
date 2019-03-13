@@ -35,7 +35,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
         List<TbContentCategory> contentCategoryList = contentCategoryMapper.selectByExample(contentCategoryExample);
         //将查询结果转换成EasyUITreeNode
         List<EasyUITreeNode> list = new ArrayList<>();
-        for(TbContentCategory contentCategory : contentCategoryList) {
+        for (TbContentCategory contentCategory : contentCategoryList) {
             EasyUITreeNode treeNode = new EasyUITreeNode();
             treeNode.setId(contentCategory.getId());
             treeNode.setText(contentCategory.getName());
@@ -65,7 +65,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
         //判断父节点的isParent属性，如果不是true则改为true
         //根据parentId查询父节点
         TbContentCategory parent = contentCategoryMapper.selectByPrimaryKey(parentId);
-        if(!parent.getIsParent()) {
+        if (!parent.getIsParent()) {
             parent.setIsParent(true);
             //更新数据库
             contentCategoryMapper.updateByPrimaryKey(parent);

@@ -28,6 +28,7 @@ public class ItemServiceImpl implements ItemService {
 
     /**
      * 通过商品ID获取商品信息
+     *
      * @param itemId
      * @return
      */
@@ -46,8 +47,9 @@ public class ItemServiceImpl implements ItemService {
 
     /**
      * 获取订单分页信息
-     * @param page                      当前页数
-     * @param rows                      每页显示记录数
+     *
+     * @param page 当前页数
+     * @param rows 每页显示记录数
      * @return EasyUIDataGridResult     分页每页信息
      */
     @Override
@@ -69,6 +71,7 @@ public class ItemServiceImpl implements ItemService {
 
     /**
      * 添加商品信息
+     *
      * @param item
      * @param desc
      * @return

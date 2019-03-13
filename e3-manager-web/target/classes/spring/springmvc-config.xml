@@ -11,39 +11,41 @@
        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!--引入图片服务器url地址-->
-    <context:property-placeholder location="classpath:conf/resource.properties" />
+    <context:property-placeholder location="classpath:conf/resource.properties"/>
 
-    <context:component-scan base-package="cn.e3mall.controller" />
+    <context:component-scan base-package="cn.e3mall.controller"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/" />
-        <property name="suffix" value=".jsp" />
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
     </bean>
 
     <!--定义文件上传解析器-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <!--设定默认编码-->
-        <property name="defaultEncoding" value="UTF-8" />
+        <property name="defaultEncoding" value="UTF-8"/>
         <!--设定上传文件大小，最大为5M，5*1024*1024-->
-        <property name="maxUploadSize" value="5242880" />
+        <property name="maxUploadSize" value="5242880"/>
     </bean>
 
     <!--两个组件DefaultAnnotationHandlerMapping与AnnotationMethodHandlerAdapter-->
     <!-- 注册HandlerMapper、HandlerAdapter两个映射类 -->
     <!-- 启用默认配置  conversion-service用于配置自定义转换器-->
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
 
     <!--访问静态资源-->
-    <mvc:default-servlet-handler />
+    <mvc:default-servlet-handler/>
 
     <!-- 引用dubbo服务 -->
     <dubbo:application name="e3-manager-web"/>
     <dubbo:registry protocol="zookeeper" address="47.107.243.254:2181"/>
     <!--商品服务-->
-    <dubbo:reference interface="cn.e3mall.service.ItemService" id="itemService" />
-    <dubbo:reference interface="cn.e3mall.service.ItemCatService" id="itemCatService" />
+    <dubbo:reference interface="cn.e3mall.service.ItemService" id="itemService"/>
+    <dubbo:reference interface="cn.e3mall.service.ItemCatService" id="itemCatService"/>
     <!--内容服务-->
-    <dubbo:reference interface="cn.e3mall.content.service.ContentCategoryService" id="contentCategoryService" />
-    <dubbo:reference interface="cn.e3mall.content.service.ContentService" id="contentService" />
-    
+    <dubbo:reference interface="cn.e3mall.content.service.ContentCategoryService" id="contentCategoryService"/>
+    <dubbo:reference interface="cn.e3mall.content.service.ContentService" id="contentService"/>
+    <!--索引库服务-->
+    <dubbo:reference interface="cn.e3mall.search.service.SearchItemService" id="searchItemService" />
+
 </beans>
