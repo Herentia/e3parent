@@ -12,8 +12,12 @@ import com.e3mall.common.utils.IDUtils;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import javax.jms.*;
 import java.util.Date;
 import java.util.List;
 
@@ -25,6 +29,12 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private TbItemDescMapper itemDescMapper;
+
+    @Autowired
+    private JmsTemplate jmsTemplate;
+
+    @Resource
+    private Destination topicDestination;
 
     /**
      * 通过商品ID获取商品信息
@@ -97,6 +107,16 @@ public class ItemServiceImpl implements ItemService {
         itemDesc.setUpdated(new Date());
         //将描述插入商品描述表中
         itemDescMapper.insert(itemDesc);
+
+        //发送商品添加消息
+        jmsTemplate.send(topicDestination, new MessageCreator() {
+            @Override
+            public Message createMessage(Session session) throws JMSException {
+                TextMessage textMessage = session.createTextMessage(itemId + "");
+                return textMessage;
+            }
+        });
+
         //返回插入结果
         return E3Result.ok();
     }

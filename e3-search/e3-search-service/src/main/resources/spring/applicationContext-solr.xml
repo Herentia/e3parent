@@ -5,8 +5,15 @@
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
+    <!--单机版solr-->
     <bean id="solrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
         <constructor-arg name="baseURL" value="http://47.107.243.254:8080/solr-4.10.3/collection1" />
     </bean>
+
+    <!--集群版solr-->
+    <!--<bean id="cloudSolrServer" class="org.apache.solr.client.solrj.impl.CloudSolrServer">-->
+        <!--<constructor-arg name="zkHost" value="47.107.243.254:2181,47.107.243.254:2182,47.107.243.254:2183" />-->
+        <!--<property name="defaultCollection" value="collection2" />-->
+    <!--</bean>-->
 
 </beans>

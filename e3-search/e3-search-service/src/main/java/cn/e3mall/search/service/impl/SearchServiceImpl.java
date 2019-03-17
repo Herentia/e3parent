@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 /**
  * @author haohan
  * 03/13/2019 - 04:49 下午
+ * 获取索引库商品信息
  */
 @Service
 public class SearchServiceImpl implements SearchService {

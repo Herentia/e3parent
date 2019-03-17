@@ -13,4 +13,11 @@ public interface ItemMapper {
 
     List<SearchItem> getItemList();
 
+    /**
+     * 根据商品ID获取商品索引库信息
+     * @param itemId 商品ID
+     * @return 商品索引库信息
+     */
+    SearchItem getItemById(Long itemId);
+
 }

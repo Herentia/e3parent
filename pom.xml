@@ -15,6 +15,7 @@
         <module>e3-search</module>
         <module>e3-search</module>
         <module>e3-search-web</module>
+        <module>e3-item-web</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -52,7 +53,8 @@
         <dubbo.version>2.5.3</dubbo.version>
         <zookeeper.version>3.4.7</zookeeper.version>
         <zkclient.version>0.1</zkclient.version>
-        <activemq.version>5.11.2</activemq.version>
+        <activemq.version>5.15.2</activemq.version>
+        <javaxjms.version>2.0.1</javaxjms.version>
         <freemarker.version>2.3.23</freemarker.version>
         <quartz.version>2.2.2</quartz.version>
     </properties>
@@ -246,11 +248,18 @@
                 <artifactId>zkclient</artifactId>
                 <version>${zkclient.version}</version>
             </dependency>
+            <!--消息中间件-->
             <dependency>
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-all</artifactId>
                 <version>${activemq.version}</version>
             </dependency>
+            <dependency>
+                <groupId>javax.jms</groupId>
+                <artifactId>javax.jms-api</artifactId>
+                <version>${javaxjms.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.freemarker</groupId>
                 <artifactId>freemarker</artifactId>
