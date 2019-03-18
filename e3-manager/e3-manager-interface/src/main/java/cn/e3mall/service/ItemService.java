@@ -1,6 +1,7 @@
 package cn.e3mall.service;
 
 import cn.e3mall.pojo.TbItem;
+import cn.e3mall.pojo.TbItemDesc;
 import com.e3mall.common.pojo.EasyUIDataGridResult;
 import com.e3mall.common.pojo.E3Result;
 
@@ -17,5 +18,10 @@ public interface ItemService {
 
     //添加商品
     E3Result addItem(TbItem item, String desc);
+
+    //根据商品ID获取商品描述表的信息
+    TbItemDesc getItemDescById(long itemId);
+
+
 
 }
