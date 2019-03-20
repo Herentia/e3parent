@@ -16,6 +16,8 @@
         <module>e3-search</module>
         <module>e3-search-web</module>
         <module>e3-item-web</module>
+        <module>e3-sso</module>
+        <module>e3-sso-web</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -55,7 +57,7 @@
         <zkclient.version>0.1</zkclient.version>
         <activemq.version>5.11.2</activemq.version>
         <javaxjms.version>2.0.1</javaxjms.version>
-        <freemarker.version>2.3.23</freemarker.version>
+        <freemarker.version>2.3.28</freemarker.version>
         <quartz.version>2.2.2</quartz.version>
     </properties>
 
@@ -265,6 +267,7 @@
                 <artifactId>freemarker</artifactId>
                 <version>${freemarker.version}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
