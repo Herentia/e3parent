@@ -1,5 +1,6 @@
 package cn.e3mall.sso.service;
 
+import cn.e3mall.pojo.TbUser;
 import com.e3mall.common.pojo.E3Result;
 
 /**
@@ -15,5 +16,12 @@ public interface RegisterService {
      * @return E3Result
      */
     E3Result cheakData(String param, int type);
+
+    /**
+     * 注册用户
+     * @param user
+     * @return
+     */
+    E3Result Register(TbUser user);
 
 }
