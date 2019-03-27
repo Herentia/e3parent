@@ -26,7 +26,7 @@ public class TokenServiceImpl implements TokenService {
         //根据token从redis中取出用户信息
         String json = jedisClient.get("SESSION:" + token);
         //如果取不到用户信息，则session已经过去
-        if(!StringUtils.isBlank(json)) {
+        if(StringUtils.isBlank(json)) {
             return E3Result.build(201, "用户登录已经过期！");
         }
         //取到用户信息更新token过期时间

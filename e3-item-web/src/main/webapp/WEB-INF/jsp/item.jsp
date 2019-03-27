@@ -106,7 +106,7 @@
                                 <a href="javascript:;" id="reduce-sell-num" class="p-reduce disable">-</a>
                             </span>
                         </div>
-                        <div class="pBtn" id="cart-add-btn-sf"><a onclick="cartAdd(${item.id}, 0, 1, 0, 1, this);"><b></b>加入购物车</a></div>
+                        <div class="pBtn" id="cart-add-btn-sf"><a onclick="cartAdd(${item.id}, 0, 1, 0, 1, this);"><b></b>加入购物车ya</a></div>
                         <div class="pBtn quickBuy" style="display: none;" id="quickBuy" title="快速下单，直达填写订单页面"><a onclick="oneKeyBuy(${item.id}, 0, 1, 0, 1, this);">一键购买</a></div>
 						<div class="yj_time" id="sendTime">预计发货时间：<br>2014-02-28 08:59</div>
 						<div class="phone_client phone_border"><div id="phone_time">扫描下载客户端<br><em>先摇券 后买单</em></div>
