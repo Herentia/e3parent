@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 /**
  * @author haohan
  * 03/25/2019 - 04:57 下午
+ * token验证,通过token到缓存中去取user信息进行验证
  */
 @Service
 public class TokenServiceImpl implements TokenService {
@@ -25,7 +26,7 @@ public class TokenServiceImpl implements TokenService {
     public E3Result getUserByToken(String token) {
         //根据token从redis中取出用户信息
         String json = jedisClient.get("SESSION:" + token);
-        //如果取不到用户信息，则session已经过去
+        //如果取不到用户信息，则session已经过时
         if(StringUtils.isBlank(json)) {
             return E3Result.build(201, "用户登录已经过期！");
         }

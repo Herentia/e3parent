@@ -34,6 +34,6 @@
 
     <dubbo:reference interface="cn.e3mall.service.ItemService" id="itemService"/>
     <!--<dubbo:reference interface="cn.e3mall.sso.service.LoginService" id="loginService" />-->
-    <!--<dubbo:reference interface="cn.e3mall.sso.service.TokenService" id="tokenService" />-->
+    <dubbo:reference interface="cn.e3mall.sso.service.TokenService" id="tokenService" />
 
 </beans>
