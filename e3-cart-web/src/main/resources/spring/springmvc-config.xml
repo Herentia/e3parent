@@ -20,6 +20,13 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="cn.e3mall.cart.intercepter.LoginIntercepter" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <!--两个组件DefaultAnnotationHandlerMapping与AnnotationMethodHandlerAdapter-->
     <!-- 注册HandlerMapper、HandlerAdapter两个映射类 -->
     <!-- 启用默认配置  conversion-service用于配置自定义转换器-->
@@ -33,7 +40,8 @@
     <dubbo:registry protocol="zookeeper" address="47.107.243.254:2181"/>
 
     <dubbo:reference interface="cn.e3mall.service.ItemService" id="itemService"/>
-    <!--<dubbo:reference interface="cn.e3mall.sso.service.LoginService" id="loginService" />-->
     <dubbo:reference interface="cn.e3mall.sso.service.TokenService" id="tokenService" />
+    <!--购物车信息服务-->
+    <dubbo:reference interface="cn.e3mall.cart.service.CartService" id="cartService" />
 
 </beans>
