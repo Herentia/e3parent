@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--引入图片服务器url地址-->
+    <context:property-placeholder location="classpath:conf/resource.properties"/>
+
+    <context:component-scan base-package="cn.e3mall.order.controller"/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--&lt;!&ndash;定义文件上传解析器&ndash;&gt;-->
+    <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+    <!--&lt;!&ndash;设定默认编码&ndash;&gt;-->
+    <!--<property name="defaultEncoding" value="UTF-8" />-->
+    <!--&lt;!&ndash;设定上传文件大小，最大为5M，5*1024*1024&ndash;&gt;-->
+    <!--<property name="maxUploadSize" value="5242880" />-->
+    <!--</bean>-->
+
+    <!--两个组件DefaultAnnotationHandlerMapping与AnnotationMethodHandlerAdapter-->
+    <!-- 注册HandlerMapper、HandlerAdapter两个映射类 -->
+    <!-- 启用默认配置  conversion-service用于配置自定义转换器-->
+    <mvc:annotation-driven/>
+
+    <!--访问静态资源-->
+    <mvc:default-servlet-handler/>
+
+    <!-- 引用dubbo服务 -->
+    <dubbo:application name="e3-order-web"/>
+    <dubbo:registry protocol="zookeeper" address="47.107.243.254:2181"/>
+
+    <dubbo:reference interface="cn.e3mall.cart.service.CartService" id="cartService"/>
+    <!--<dubbo:reference interface="cn.e3mall.service.ItemCatService" id="itemCatService" />-->
+
+</beans>
