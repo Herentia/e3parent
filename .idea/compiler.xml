@@ -8,25 +8,25 @@
         <outputRelativeToContentRoot value="true" />
         <module name="e3-manager-pojo" />
         <module name="e3-manager-web" />
+        <module name="e3-sso-service" />
         <module name="e3-manager-interface" />
         <module name="e3-cart-web" />
-        <module name="e3-search-interface" />
+        <module name="e3-order-service" />
         <module name="e3-cart-interface" />
         <module name="e3-cart-service" />
         <module name="e3-item-web" />
         <module name="e3-portal-web" />
-        <module name="e3-order-service" />
+        <module name="e3-order-web" />
         <module name="e3-sso-interface" />
         <module name="e3-manager-dao" />
         <module name="e3-content-interface" />
         <module name="e3-content-service" />
-        <module name="e3-order-web" />
         <module name="e3-common" />
         <module name="e3-order-interface" />
-        <module name="e3-manager-service" />
-        <module name="e3-sso-web" />
-        <module name="e3-sso-service" />
         <module name="e3-search-web" />
+        <module name="e3-sso-web" />
+        <module name="e3-manager-service" />
+        <module name="e3-search-interface" />
         <module name="e3-search-service" />
       </profile>
     </annotationProcessing>

@@ -20,6 +20,14 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <!--    配置拦截器   -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="cn.e3mall.order.intercept.OrderIntercept" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <!--&lt;!&ndash;定义文件上传解析器&ndash;&gt;-->
     <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
     <!--&lt;!&ndash;设定默认编码&ndash;&gt;-->
@@ -41,6 +49,7 @@
     <dubbo:registry protocol="zookeeper" address="47.107.243.254:2181"/>
 
     <dubbo:reference interface="cn.e3mall.cart.service.CartService" id="cartService"/>
-    <!--<dubbo:reference interface="cn.e3mall.service.ItemCatService" id="itemCatService" />-->
+    <dubbo:reference interface="cn.e3mall.sso.service.TokenService" id="tokenService" />
+    <dubbo:reference interface="cn.e3mall.order.service.OrderService" id="orderService" />
 
 </beans>

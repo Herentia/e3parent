@@ -53,4 +53,11 @@ public interface CartService {
      */
     public E3Result deleteCartItem(long userId, long itemId);
 
+    /**
+     * 清空购物车信息
+     * @param userId    用户ID
+     * @return  E3Result
+     */
+    public E3Result clearCartItem(long userId);
+
 }
